@@ -1,14 +1,13 @@
 import turtle
 
-t = turtle.Turtle()
-cpt = 0
-#5 marches de 30 pixels
-while(cpt != 5):
-    t.forward(30)
-    t.left(90)
-    t.forward(30)
-    t.right(90)
-    cpt += 1
-t.forward(30)
+def escalier(taille, nb):
+    for i in range(0, nb):
+        t.forward(taille)
+        t.left(90)
+        t.forward(taille)
+        t.right(90)
+    t.forward(taille)
 
+t = turtle.Turtle()
+escalier(50,10)
 turtle.done()
