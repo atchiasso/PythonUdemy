@@ -8,9 +8,15 @@ def poser_question():
     a = random.randint(NOMBRE_MIN, NOMBRE_MAX)
     b = random.randint(NOMBRE_MIN, NOMBRE_MAX)
     o = random.randint(0, 1)
-    resultat = input(f"Calculez : {a} + {b} = ")
+    operateur_str = "+"
+    if o == 1:
+        operateur_str = "*"
+    resultat = input(f"Calculez : {a} {operateur_str} {b} = ")
     resultat_int = int(resultat)
-    if resultat_int == (a + b):
+    calcul = a + b
+    if o == 1:
+        calcul = a * b
+    if resultat_int == calcul:
         return True
     return False
 
