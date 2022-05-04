@@ -11,10 +11,15 @@ def poser_question():
     resultat_int = int(resultat)
     if resultat_int == (a + b):
         print("Réponse correcte")
+        return True
     else:
         print("Réponse incorrecte")
+        return False
 
+nb_points = 0
 for i in range(1, NB_QUESTIONS+1):
     print(f"Question n°{i} sur {NB_QUESTIONS} :")
-    poser_question()
-    print()
+    if poser_question():
+        nb_points += 1
+print()
+print(f"Votre note est de {nb_points}/{NB_QUESTIONS}")
