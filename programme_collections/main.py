@@ -1,12 +1,15 @@
 # Collections : (Tableaux : Array), Listes, Tuples
 # Tuple : immutable -> Non modifiable
 # Liste []: mutable -> modifiable
+# slice : [start:stop:step] -> start inclusif / stop exclusif
 
-def obtenir_informations():
-    return "Mélanie", 37, 1.68
+noms = []
 
-def afficher_informations(nom, age, taille):
-    print(f"Informations: Nom {nom}, age : {age}, taille : {taille}")
+while(True):
+    nom = input("Nom de la personne : ")
+    if nom == "":
+        break
+    print("Le nom est : ", nom)
+    noms.append(nom)
 
-infos = obtenir_informations()
-afficher_informations(*infos) #unpack tuple
+print(noms)
