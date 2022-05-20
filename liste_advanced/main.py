@@ -7,5 +7,9 @@ noms = ["Jean", "Sophie", "Martin", "Christophe", "Zoe"]
 # nom_avec_e = [nom for nom in noms if "e" in nom]
 
 # a = [i for i in range(5) if (i % 2) == 0]
-b = [(i, True if (i%2) == 0 else False) for i in range(5)]
-print(b)
+# b = [(i, True if (i%2) == 0 else False) for i in range(5)]
+# print(b)
+
+nom = "toto464"
+digit = any([c.isdigit() for c in nom])
+print(digit)
